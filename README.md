@@ -46,7 +46,7 @@ Notes:
 - The team works on a `team/<slug>` branch with one commit per task and never pushes.
 - Specialists you add with `team-hire` are stored in the project (`.claude/agents/` and `.team/roster-extra.md`), so they survive plugin updates.
 - Changes to the core prompts are made in this repo. Edit a file on GitHub, commit, and update with `/plugin marketplace update mwallq-toolkit`.
-- `settings.team.example.json` is optional: pre-approved read-only git and commits, blocked `git push`, hard resets and similar. Merge it into a project's `.claude/settings.json` or your own settings.
+- `settings.team.example.json` is optional: pre-approved read-only git and commits, asks before `git push`, blocks hard resets and similar. Merge it into a project's `.claude/settings.json` or your own settings.
 
 ## Layout
 
