@@ -17,9 +17,18 @@ Inside Claude Code, run these three commands, replacing `gopnikzxc`:
 
 Choose **user** scope if asked, so they apply to every project. Restart Claude Code, then type `/` and look for `software-team:team` and `grill-me`. In each project, run `/setup-matt-pocock-skills` once.
 
-## Use in browser Claude Code (claude.ai/code)
+## Use in browser Claude Code (easiest)
 
-Browser sessions start from your repository, so tell each repo about the plugins. Add the file `.claude/settings.json` to the repo with the contents of `project-settings-snippet.json` (replace the username), commit it, and start a new session. Claude Code will ask you to trust the marketplace the first time.
+Browser sessions load whatever is in a repo's `.claude/` folder, so this repo carries a ready-made `.claude/` with:
+
+- the software team: `/team`, `/team-hire`, `/team-retro`
+- a copy of Matt Pocock's skills (`/ask-matt`, `/grill-me`, `/to-spec`, `/tdd` ...), installed with `npx skills@latest add mattpocock/skills -a claude-code`; some niche ones were removed. Re-run that command to update them.
+
+**New projects:** on this repo's page open Settings, tick **Template repository**. After that, create each new project with **Use this template** and it starts with everything in place.
+
+**Existing projects:** copy the `.claude/` folder into the project (ask Claude Code: "copy the .claude folder from gopnikzxc/claude-toolkit into this repo"). Then run `/setup-matt-pocock-skills` once in that project.
+
+The plugin route above is for the desktop app or terminal. Do not use both in the same project, or every command appears twice. In the browser setup the team commands are `/team`, `/team-hire` and `/team-retro` (no `software-team:` prefix).
 
 ## Use the team
 
